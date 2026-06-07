@@ -13,7 +13,7 @@
 ### 📝 Présentation du Projet
 **MediCab** est une application web dynamique basée sur une **architecture 3-Tiers**. Elle a été conçue pour digitaliser et optimiser l'ensemble des processus administratifs et médicaux d'un cabinet (suivi patient, consultations complexes, historique et ordonnances).
 
-* 👨‍💻 **Développé par :** [Ton Nom], Benthami Marouane & Rabaibi Houssam
+* 👨‍💻 **Développé par :** Chahine Adam, Benthami Marouane & Rabaibi Houssam
 * 🎓 **Encadrant :** Pr. Zouheir Banou (ISGA Casablanca)
 * 💼 **Cadre :** Projet de Fin d'Année (PFA) — Cursus Cycle Ingénieur
 
@@ -21,7 +21,7 @@
 
 ## 🛠️ Fonctionnalités Majeures
 
-* 🔐 **Double Authentification Métier :** Espaces cloisonnés et sécurisés pour les Patients et le Praticien (Dr. Benali).
+* 🔐 **Double Authentification Métier :** Espaces cloisonnés et sécurisés pour les Patients et le Praticien.
 * 📅 **Portail Patient Intuitif :** Inscription par CIN unique, prise et suivi des rendez-vous en temps réel, téléversement de documents médicaux (Analyses, Imagerie au format PDF/Image).
 * 🗂️ **Gestion Clinique (Espace Médecin) :** Tableau de bord dynamique, gestion complète des dossiers médicaux, module de consultation médicale avec prise de constantes (Tension, Pouls, Poids) et **génération automatique d'ordonnances**.
 
