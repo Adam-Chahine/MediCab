@@ -1,0 +1,430 @@
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #2ecc71;
+            --danger: #e74c3c;
+            --warning: #f39c12;
+            --light: #f0f4f8;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--primary);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        /* ── Header ── */
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .page-header h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .page-header p {
+            font-size: 0.82rem;
+            color: #888;
+            margin-top: 3px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #e8ecf0;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #666;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .btn-back:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        /* ── Patient banner ── */
+        .patient-banner {
+            background: white;
+            border-radius: 18px;
+            padding: 22px 26px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px;
+            border-left: 5px solid var(--secondary);
+        }
+
+        .patient-banner-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .patient-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .patient-banner h3 {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .patient-banner p {
+            font-size: 0.78rem;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        .btn-print {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: .25s;
+            text-decoration: none;
+        }
+
+        .btn-print:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* ── Card ── */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .card-title i {
+            color: var(--secondary);
+        }
+
+        /* ── Constantes vitales ── */
+        .vitals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 14px;
+        }
+
+        .vital-item {
+            background: var(--light);
+            border-radius: 14px;
+            padding: 16px 18px;
+            text-align: center;
+        }
+
+        .vital-icon {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .vital-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .vital-label {
+            font-size: 0.72rem;
+            color: #aaa;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-top: 3px;
+        }
+
+        .vital-unit {
+            font-size: 0.72rem;
+            color: #aaa;
+            margin-top: 2px;
+        }
+
+        .vital-empty {
+            color: #ccc;
+            font-size: 0.82rem;
+            font-style: italic;
+        }
+
+        /* ── Diagnostic ── */
+        .diag-box {
+            background: rgba(52, 152, 219, 0.06);
+            border: 1px solid rgba(52, 152, 219, 0.15);
+            border-radius: 14px;
+            padding: 18px 20px;
+            font-size: 0.92rem;
+            color: var(--primary);
+            line-height: 1.7;
+        }
+
+        .next-rdv-box {
+            background: rgba(46, 204, 113, 0.07);
+            border: 1px solid rgba(46, 204, 113, 0.2);
+            border-radius: 14px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.88rem;
+            color: #1e8449;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+
+        .next-rdv-box i {
+            font-size: 1.1rem;
+        }
+
+        /* ── Ordonnance ── */
+        .ordo-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .ordo-table thead tr {
+            background: var(--light);
+        }
+
+        .ordo-table thead th {
+            padding: 11px 16px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: #888;
+            text-align: left;
+        }
+
+        .ordo-table tbody tr {
+            border-bottom: 1px solid #f0f0f0;
+            transition: .2s;
+        }
+
+        .ordo-table tbody tr:last-child {
+            border: none;
+        }
+
+        .ordo-table tbody tr:hover {
+            background: #fafcff;
+        }
+
+        .ordo-table tbody td {
+            padding: 14px 16px;
+            font-size: 0.87rem;
+            color: #444;
+        }
+
+        .ordo-table tbody td:first-child {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .med-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(52, 152, 219, 0.08);
+            border: 1px solid rgba(52, 152, 219, 0.15);
+            border-radius: 8px;
+            padding: 4px 10px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .ordo-empty {
+            text-align: center;
+            padding: 30px;
+            color: #ccc;
+            font-size: 0.85rem;
+        }
+
+        .ordo-empty i {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* ── Documents ── */
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+        }
+
+        .doc-item {
+            background: var(--light);
+            border-radius: 14px;
+            padding: 16px 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: .3s;
+        }
+
+        .doc-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .doc-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .doc-icon.pdf {
+            color: #e74c3c;
+        }
+
+        .doc-icon.image {
+            color: var(--secondary);
+        }
+
+        .doc-name {
+            font-size: 0.83rem;
+            font-weight: 600;
+            color: var(--primary);
+            word-break: break-all;
+        }
+
+        .doc-date {
+            font-size: 0.72rem;
+            color: #aaa;
+            margin-top: 2px;
+        }
+
+        .btn-dl {
+            margin-left: auto;
+            flex-shrink: 0;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--secondary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .btn-dl:hover {
+            background: #2980b9;
+            transform: scale(1.1);
+        }
+
+        .doc-empty {
+            text-align: center;
+            padding: 30px;
+            color: #ccc;
+            font-size: 0.85rem;
+        }
+
+        .doc-empty i {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* ── Print ── */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .btn-back,
+            .btn-print {
+                display: none !important;
+            }
+
+            .page-header {
+                margin-bottom: 14px;
+            }
+
+            .card {
+                box-shadow: none;
+                border: 1px solid #eee;
+                margin-bottom: 14px;
+                padding: 20px;
+            }
+
+            .patient-banner {
+                box-shadow: none;
+                border: 1px solid #eee;
+            }
+        }
+
+        @media(max-width:600px) {
+            .vitals-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .doc-grid {
+                grid-template-columns: 1fr;
+            }
+        }

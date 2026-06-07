@@ -1,0 +1,395 @@
+    :root {
+        --primary: #2c3e50;
+        --secondary: #3498db;
+        --accent: #2ecc71;
+        --light: #f8f9fa;
+        --dark: #2c3e50;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        background-color: white;
+        color: var(--dark);
+        overflow-x: hidden;
+    }
+
+    /* --- ANIMATIONS --- */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* --- HEADER & NAV --- */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 8%;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--secondary);
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--primary);
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: var(--secondary);
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        padding: 0 8%;
+        background:
+            linear-gradient(to right,
+                rgba(255, 255, 255, 0.9),
+                rgba(255, 255, 255, 0.2)),
+            url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=2053");
+        /* Image de fond cabinet */
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-content {
+        max-width: 600px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        color: var(--primary);
+    }
+
+    .hero-content span {
+        color: var(--secondary);
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        color: #555;
+    }
+
+    .btn {
+        padding: 15px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.4s;
+        display: inline-block;
+    }
+
+    .btn-primary {
+        background: var(--secondary);
+        color: white;
+        margin-right: 15px;
+        box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    }
+
+    .btn-primary:hover {
+        transform: scale(1.05);
+        background: #2980b9;
+    }
+
+    .btn-outline {
+        border: 2px solid var(--secondary);
+        color: var(--secondary);
+    }
+
+    .btn-outline:hover {
+        background: var(--secondary);
+        color: white;
+    }
+
+    /* --- SERVICES SECTION --- */
+    .services {
+        padding: 100px 8%;
+        background: var(--light);
+        text-align: center;
+    }
+
+    .section-title {
+        margin-bottom: 50px;
+    }
+
+    .service-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .service-card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        transition: 0.3s;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card i {
+        font-size: 3rem;
+        color: var(--secondary);
+        margin-bottom: 20px;
+    }
+
+    /* --- WHY CHOOSE US --- */
+    .why-us {
+        padding: 100px 8%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .why-us-text {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 15px;
+    }
+
+    .feature-item i {
+        color: var(--accent);
+        font-size: 1.5rem;
+    }
+
+    /* Map Section */
+    .map-section {
+        padding: 4rem 2rem 6rem;
+        background-color: var(--light);
+        color: var(--light);
+    }
+
+    .map-header {
+        max-width: 1200px;
+        margin: 0 auto 2rem;
+        text-align: center;
+    }
+
+    .location-title {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+        color: var(--primary);
+        position: relative;
+        display: inline-block;
+    }
+
+    .location-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--primary);
+    }
+
+    .location-description {
+        font-size: 1.1rem;
+        color: rgba(50, 40, 85, 0.8);
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .map-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+        display: block;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+        nav {
+            padding: 15px 5%;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            width: auto;
+            /* important */
+            flex-wrap: wrap;
+            /* empêche le débordement */
+            justify-content: flex-end;
+        }
+
+        .nav-links li {
+            width: auto;
+            /* enlever width:100% */
+        }
+
+        .nav-links a {
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            /* empêche le retour à la ligne */
+        }
+
+        .nav-links a:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 2.3rem;
+        }
+
+        .hero {
+            text-align: center;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .hero {
+            height: auto;
+            padding: 100px 5% 60px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 100%;
+        }
+
+        .hero-content h1 {
+            font-size: 2.3rem;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+        }
+
+        .hero-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 280px;
+            text-align: center;
+        }
+
+        .services {
+            padding: 70px 5%;
+        }
+
+        .service-card {
+            padding: 30px 20px;
+        }
+
+        .why-us {
+            padding: 70px 5%;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .why-us-text {
+            text-align: center;
+        }
+
+        .feature-item {
+            justify-content: center;
+            text-align: left;
+        }
+
+        .map-section {
+            padding: 60px 5%;
+        }
+
+        .map-container iframe {
+            height: 300px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-content h1 {
+            font-size: 1.9rem;
+            line-height: 1.3;
+        }
+
+        .section-title h2,
+        .why-us h2,
+        .location-title {
+            font-size: 1.6rem;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            font-size: 0.9rem;
+        }
+
+        .service-card i {
+            font-size: 2.2rem;
+        }
+    }

@@ -1,0 +1,248 @@
+        :root {
+            --primary: #1a2a3a;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --danger: #ef4444;
+            --light: #f0f9ff;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* ── Carte login ── */
+        .login-card {
+            background: white;
+            border-radius: 28px;
+            padding: 50px 45px;
+            width: 100%;
+            max-width: 440px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+            animation: fadeUp .5s ease;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ── Header ── */
+        .login-header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        .login-icon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 18px;
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+        }
+
+        .login-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .login-header p {
+            font-size: 0.82rem;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+
+        /* ── Divider ── */
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .divider span {
+            font-size: 0.72rem;
+            color: #94a3b8;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* ── Form ── */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .input-wrap {
+            position: relative;
+        }
+
+        .input-wrap i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 0.85rem;
+            pointer-events: none;
+            transition: .3s;
+        }
+
+        .input-wrap input {
+            width: 100%;
+            padding: 14px 16px 14px 44px;
+            border: 2px solid #e2e8f0;
+            border-radius: 14px;
+            font-size: 0.88rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            background: #f8fafc;
+            transition: .3s;
+            outline: none;
+        }
+
+        .input-wrap input:focus {
+            border-color: var(--secondary);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1);
+        }
+
+        .input-wrap:focus-within i {
+            color: var(--secondary);
+        }
+
+        /* ── Toggle password ── */
+        .toggle-pwd {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: .3s;
+            pointer-events: all;
+        }
+
+        .toggle-pwd:hover {
+            color: var(--secondary);
+        }
+
+        /* ── Alert ── */
+        .alert-error {
+            background: #fef2f2;
+            border-left: 4px solid var(--danger);
+            color: #b91c1c;
+            border-radius: 12px;
+            padding: 13px 16px;
+            font-size: 0.83rem;
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* ── Submit ── */
+        .btn-login {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--secondary), #0284c7);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.3);
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(14, 165, 233, 0.4);
+        }
+
+        .btn-login:active {
+            transform: translateY(0);
+        }
+
+        /* ── Footer ── */
+        .login-footer {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 0.78rem;
+            color: #94a3b8;
+        }
+
+        .login-footer a {
+            color: var(--secondary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Badge médecin ── */
+        .medecin-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(16, 185, 129, 0.1));
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            border-radius: 50px;
+            padding: 6px 16px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 14px;
+        }

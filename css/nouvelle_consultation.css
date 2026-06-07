@@ -1,0 +1,477 @@
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #2ecc71;
+            --danger: #e74c3c;
+            --warning: #f39c12;
+            --light: #f0f4f8;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--primary);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* ── Header page ── */
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .page-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .page-header p {
+            font-size: 0.82rem;
+            color: #888;
+            margin-top: 3px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #e8ecf0;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #666;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .btn-back:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        /* ── Patient info ── */
+        .patient-banner {
+            background: white;
+            border-radius: 18px;
+            padding: 22px 26px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            border-left: 5px solid var(--secondary);
+        }
+
+        .patient-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .patient-banner h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .patient-banner p {
+            font-size: 0.78rem;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        /* ── Card ── */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 22px;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .card-title i {
+            color: var(--secondary);
+        }
+
+        /* ── Form ── */
+        .form-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .form-grid-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 18px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 7px;
+        }
+
+        .input-wrap {
+            position: relative;
+        }
+
+        .input-wrap i.fi {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #b0bec5;
+            font-size: .85rem;
+            pointer-events: none;
+        }
+
+        .input-wrap input,
+        .input-wrap select,
+        .input-wrap textarea {
+            width: 100%;
+            padding: 11px 14px 11px 40px;
+            border: 2px solid #e8ecf0;
+            border-radius: 12px;
+            font-size: 0.87rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            background: #fafbfc;
+            transition: .3s;
+            outline: none;
+        }
+
+        .input-wrap textarea {
+            padding-top: 12px;
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .input-wrap input:focus,
+        .input-wrap select:focus,
+        .input-wrap textarea:focus {
+            border-color: var(--secondary);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.1);
+        }
+
+        /* ── Constantes vitales ── */
+        .vital-unit {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #aaa;
+        }
+
+        /* ── Ordonnance ── */
+        .med-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr 1fr auto;
+            gap: 10px;
+            align-items: end;
+            margin-bottom: 12px;
+            padding: 16px;
+            background: var(--light);
+            border-radius: 14px;
+            border: 2px solid transparent;
+            transition: .25s;
+        }
+
+        .med-row:hover {
+            border-color: rgba(52, 152, 219, 0.2);
+        }
+
+        .med-row .form-group {
+            margin: 0;
+        }
+
+        .med-row label {
+            font-size: 0.72rem;
+        }
+
+        .med-row input {
+            padding: 9px 12px;
+            border: 2px solid #e8ecf0;
+            border-radius: 10px;
+            font-size: 0.84rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            background: white;
+            width: 100%;
+            outline: none;
+            transition: .3s;
+        }
+
+        .med-row input:focus {
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .btn-remove-med {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(231, 76, 60, 0.1);
+            border: none;
+            color: var(--danger);
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: .25s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            align-self: flex-end;
+        }
+
+        .btn-remove-med:hover {
+            background: var(--danger);
+            color: white;
+        }
+
+        .btn-add-med {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 22px;
+            background: rgba(52, 152, 219, 0.1);
+            border: 2px dashed rgba(52, 152, 219, 0.4);
+            border-radius: 12px;
+            color: var(--secondary);
+            font-size: 0.84rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: .25s;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .btn-add-med:hover {
+            background: rgba(52, 152, 219, 0.18);
+            border-color: var(--secondary);
+        }
+
+        /* ── Upload ── */
+        .upload-zone {
+            border: 2px dashed #d0dce8;
+            border-radius: 14px;
+            padding: 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: .3s;
+            background: #fafbfc;
+            position: relative;
+        }
+
+        .upload-zone:hover {
+            border-color: var(--secondary);
+            background: rgba(52, 152, 219, 0.03);
+        }
+
+        .upload-zone input[type="file"] {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .upload-zone i {
+            font-size: 1.8rem;
+            color: #b0bec5;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .upload-zone p {
+            font-size: 0.82rem;
+            color: #aaa;
+        }
+
+        .upload-zone span {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        #fileList {
+            margin-top: 10px;
+        }
+
+        .file-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 50px;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin: 3px;
+        }
+
+        /* ── Alert ── */
+        .alert {
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .alert-success {
+            background: #eafaf1;
+            border-left: 4px solid var(--accent);
+            color: #1e8449;
+        }
+
+        .alert-error {
+            background: #fdf0f0;
+            border-left: 4px solid var(--danger);
+            color: #c0392b;
+        }
+
+        /* ── Submit ── */
+        .form-actions {
+            display: flex;
+            gap: 14px;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .btn-submit {
+            padding: 14px 32px;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: .3s;
+        }
+
+        .btn-submit:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-cancel {
+            padding: 14px 32px;
+            background: white;
+            color: #666;
+            border: 2px solid #e8ecf0;
+            border-radius: 50px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: .3s;
+            text-decoration: none;
+        }
+
+        .btn-cancel:hover {
+            border-color: var(--danger);
+            color: var(--danger);
+        }
+
+        /* ── Section title ── */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 28px 0 20px;
+        }
+
+        .section-divider span {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #aaa;
+            white-space: nowrap;
+        }
+
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e8ecf0;
+        }
+
+        @media(max-width:768px) {
+            .form-grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid-4 {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .med-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
