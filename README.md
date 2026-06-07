@@ -1,4 +1,4 @@
-# Salam Adam MediCab 🏥 — Plateforme de Gestion de Cabinet Médical
+# MediCab 🏥 — Plateforme de Gestion de Cabinet Médical
 
 <p align="center">
   <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
